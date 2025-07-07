@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+.dev {
+  border: 2px solid red;
+}
+
+.dev2 {
+  border: 2px solid blue;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("/static/font/Oswald/Oswald-Regular.ttf") format("truetype");
+}
+
+@theme {
+  --font-oswald: "Oswald", sans-serif;
+}

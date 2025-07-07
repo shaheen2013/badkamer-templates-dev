@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Flask Website</title>
+    <link
+      href="{{ url_for('static', filename='output.css') }}"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-oswald">
+    {% block content %}{% endblock %}
+  </body>
+</html>
