@@ -13,6 +13,12 @@
   src: url("/assets/font/Oswald/Oswald-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/font/Inter/Inter.ttf") format("truetype");
+}
+
 @theme {
   --font-oswald: "Oswald", sans-serif;
+  --font-inter: "Inter", sans-serif;
 }
