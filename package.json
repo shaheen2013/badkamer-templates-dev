@@ -2,17 +2,15 @@
   "name": "badkamervakman",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "license": "MIT",
   "scripts": {
-    "dev:css": "npx @tailwindcss/cli -i ./src/input.css -o ./static/output.css --watch",
-    "build:css": "npx @tailwindcss/cli -i ./src/input.css -o ./static/output.css --minify"
+    "dev": "vite",
+    "dev:css": "npx @tailwindcss/cli -i ./assets/input.css -o ./output.css --watch"
   },
-  "devDependencies": {
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.6"
-  },
+  "devDependencies": {},
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.11",
-    "tailwindcss": "^4.1.11"
+    "@tailwindcss/vite": "^4.1.11",
+    "vite": "^7.0.3"
   }
 }

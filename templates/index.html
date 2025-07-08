@@ -1,6 +1,75 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-{% block content %}
-    {% include "sections/header.html" %}
-    {% include "sections/hero.html" %}
-{% endblock %}
+    <link href="/assets/style.css" rel="stylesheet" />
+
+    <!-- font -->
+    <link href="/assets/font/Oswald/Oswald-Regular.ttf" rel="stylesheet" />
+  </head>
+  <body class="font-Oswald">
+    <!-- header -->
+    <header class="bg-transprent absolute top-0 w-full">
+      <div
+        class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center sticky top-0 z-50 bg-transparent"
+      >
+        <!-- left -->
+        <a
+          href="/"
+          class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+        >
+          <img src="./assets/images/brand.svg" />
+        </a>
+
+        <!-- center -->
+        <nav
+          class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
+        >
+          <a href="/" class="mr-5 text-white">WIJ</a>
+          <a href="/" class="mr-5 text-white">BADKAMERS</a>
+          <a href="/" class="mr-5 text-white">VERBOUWING</a>
+          <a href="/" class="mr-5 text-white">Werkwijze</a>
+          <a href="/" class="mr-5 text-white">Referenties</a>
+          <a href="/" class="mr-5 text-white">Grantie</a>
+        </nav>
+
+        <!-- right -->
+        <a
+          href="/offerte"
+          class="px-10 py-[18px] bg-[#F25C3C] text-white text-lg font-bold"
+        >
+          OFFERTE
+        </a>
+      </div>
+    </header>
+
+    <!-- hero -->
+    <section
+      class="h-screen flex flex-col justify-center items-center text-center relative"
+    >
+      <div class="mx-auto">
+        <h1 class="text-[50px] font-bold text-white mb-[60px] uppercase">
+          Alles onder één Dak met 5 jaar garantie
+        </h1>
+
+        <div
+          class="max-w-[1096px] bg-[#091022]/72 backdrop-opacity-40 p-[30px] rounded text-white"
+        >
+          hey
+        </div>
+      </div>
+
+      <!-- overlay -->
+      <img
+        src="./assets/images/hero.png"
+        class="absolute inset-0 w-full h-full object-cover -z-10"
+      />
+    </section>
+
+    <!-- footer -->
+    <footer>This is a footer</footer>
+  </body>
+</html>

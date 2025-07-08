@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url("/static/font/Oswald/Oswald-Regular.ttf") format("truetype");
+  src: url("/assets/font/Oswald/Oswald-Regular.ttf") format("truetype");
 }
 
 @theme {
