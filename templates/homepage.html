@@ -11,69 +11,104 @@
   </head>
   <body class="font-oswald">
     <!-- header -->
-    <header class="bg-[#091022]/10 w-full">
-      <div
-        class="container mx-auto flex p-5 flex-col lg:flex-row items-center sticky top-0 z-50 bg-transparent gap-3"
-      >
-        <!-- left -->
-        <a
-          href="/"
-          class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
-        >
-          <img
-            src="./assets/images/brand.svg"
-            class="w-auto h-[40px] lg:w-auto lg:h-auto mr-3"
-            alt="BadkamerVakman Logo"
-          />
+    <header class="bg-[#091022]/10 w-full z-50">
+      <div class="container mx-auto flex items-center justify-between p-5">
+        <!-- Left: Logo -->
+        <a href="/" class="flex items-center">
+          <img src="./assets/images/brand.svg" alt="Logo" class="h-[40px]" />
         </a>
 
-        <!-- center -->
-        <nav
-          class="md:ml-auto md:mr-auto flex flex-col lg:flex-row items-center text-base justify-center"
-        >
+        <!-- Middle: Nav (desktop only) -->
+        <nav class="hidden lg:flex gap-6 items-center">
           <a
             href="/"
-            class="text-white/90 font-bold text-xl uppercase px-4 py-2 border-b-2"
-            >WIJ</a
+            class="text-white font-bold uppercase text-xl hover:text-[#F25C3C] transition px-3 py-2 block border-b-2"
+            >Wij</a
           >
           <a
             href="/"
-            class="text-white/90 font-bold text-xl uppercase px-4 py-2"
-            >BADKAMERS</a
+            class="text-white font-bold uppercase text-xl hover:text-[#F25C3C] transition px-3 py-2 block"
+            >Badkamers</a
           >
           <a
             href="/"
-            class="text-white/90 font-bold text-xl uppercase px-4 py-2"
-            >VERBOUWING</a
+            class="text-white font-bold uppercase text-xl hover:text-[#F25C3C] transition px-3 py-2 block"
+            >Verbouwing</a
           >
-
           <a
             href="/"
-            class="text-white/90 font-bold text-xl uppercase px-4 py-2"
+            class="text-white font-bold uppercase text-xl hover:text-[#F25C3C] transition px-3 py-2 block"
             >Werkwijze</a
           >
-
           <a
             href="/"
-            class="text-white/90 font-bold text-xl uppercase px-4 py-2"
+            class="text-white font-bold uppercase text-xl hover:text-[#F25C3C] transition px-3 py-2 block"
             >Referenties</a
           >
-
           <a
             href="/"
-            class="text-white/90 font-bold text-xl uppercase px-4 py-2"
-            >Grantie</a
+            class="text-white font-bold uppercase text-xl hover:text-[#F25C3C] transition px-3 py-2 block"
+            >Garantie</a
           >
         </nav>
 
-        <!-- right -->
+        <!-- Right: CTA button (desktop only) -->
         <a
           href="/offerte"
-          class="px-10 py-[18px] bg-[#F25C3C] text-white text-lg font-bold"
+          class="hidden lg:inline-block bg-[#F25C3C] text-white font-bold px-9 py-3 uppercase hover:bg-[#d94f32] text-lg"
         >
-          OFFERTE
+          Offerte
         </a>
+
+        <!-- Hamburger (mobile only) -->
+        <button
+          id="menu-toggle"
+          class="lg:hidden text-white z-10 border px-2 py-1 rounded"
+        >
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
       </div>
+
+      <!-- Mobile Dropdown -->
+      <nav
+        id="mobile-menu"
+        class="lg:hidden hidden flex flex-col gap-4 px-5 py-6 absolute bg-[#091022] w-full z-10"
+      >
+        <a href="/" class="text-white font-bold uppercase text-base">Wij</a>
+        <a href="/" class="text-white font-bold uppercase text-base"
+          >Badkamers</a
+        >
+        <a href="/" class="text-white font-bold uppercase text-base"
+          >Verbouwing</a
+        >
+        <a href="/" class="text-white font-bold uppercase text-base"
+          >Werkwijze</a
+        >
+        <a href="/" class="text-white font-bold uppercase text-base"
+          >Referenties</a
+        >
+        <a href="/" class="text-white font-bold uppercase text-base"
+          >Garantie</a
+        >
+        <a
+          href="/offerte"
+          class="mt-4 bg-[#F25C3C] text-white text-center px-6 py-3 font-bold uppercase text-base"
+        >
+          Offerte
+        </a>
+      </nav>
     </header>
 
     <!-- hero -->
