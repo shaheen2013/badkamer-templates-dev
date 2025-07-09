@@ -17,3 +17,5 @@ toggle.addEventListener("click", () => {
     mobileMenu.classList.add("hidden");
   }
 });
+
+$('.single-item').slick();
