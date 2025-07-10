@@ -6,6 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Badkamer</title>
 
+
+  <!-- google map cdn -->
+   <script
+    src="/assets/google-map.js"
+    defer
+></script>
+
   <!-- link -->
   <link href="/assets/style.css" rel="stylesheet" />
 
@@ -15,6 +22,7 @@
   <!-- swiper slider -->
   <link rel="stylesheet" href="/assets/slider/swiper-bundle.min.css" />
   <script src="assets/slider/swiper-bundle.min.js"></script>
+
 
 </head>
 
@@ -1166,9 +1174,9 @@
         <!-- left -->
         <div class="lg:flex justify-start relative">
           <img src="https://dummyimage.com/515x587" class="lg:w-[515px] w-full lg:h-[587px] block" />
-        
+    
           <div class="lg:absolute lg:p-10 p-4 bottom-0 right-0 lg:w-[357px] bg-[#091022]">
-            <p class="text-white lg:text-[32px] text-lg font-bold uppercase">Zwembadvoeg: <br/>
+            <p class="text-white lg:text-[32px] text-lg font-bold uppercase">Zwembadvoeg: <br />
               De koning onder
               de voegen</p>
           </div>
@@ -1178,7 +1186,8 @@
         <div class="flex flex-col justify-center lg:py-12 py-4">
           <h3 class="text-base text-[#091022] font-bold uppercase lg:mb-5 mb-3">het product van de maand</h3>
           <h2 class="text-[32px] text-[#091022] font-bold lg:mb-6 mb-3">Onze zwembad voegen verdienen aandacht</h2>
-          <p class="font-inter text-[#091022] text-lg lg:mb-8 mb-3">Deze maand willen wij één van onze unieke producten onder de
+          <p class="font-inter text-[#091022] text-lg lg:mb-8 mb-3">Deze maand willen wij één van onze unieke producten
+            onder de
             aandacht
             brengen, namelijk onze zwembadvoegen. Door dit product blijft uw badkamer decennia lang mooi. Eigenlijk
             onbegrijpelijk dat er nog andere voegen worden gebruikt in badkamers. Bij ons is dit product al 5 jaar geleden
@@ -1209,6 +1218,18 @@
     
       </div>
     </section>
+
+  <!-- map -->
+  <section class="bg-[#F4F4F4]">
+    <div
+      class="container-2 lg:py-[86px] py-12 ">
+
+      <h3 class="text-[#091022] text-base font-bold lg:mb-5 mb-3 text-center uppercase">Plaats</h3>
+      <h2 class="text-[#091022] lg:text-[40px] text-xl font-bold text-center uppercase lg:mb-[60px] mb-6">Waar we werken</h2>
+
+      <div id="map" class="lg:h-[1220px] h-[500px]"></div>
+    </div>
+  </section>
 
   <!-- footer -->
   <footer class="bg-[#091022] text-white pt-[107px] pb-5">
