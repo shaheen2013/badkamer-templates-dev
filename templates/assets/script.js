@@ -1,3 +1,4 @@
+
 console.log("Script loaded successfully!");
 
 const toggle = document.getElementById("menu-toggle");
@@ -18,4 +19,37 @@ toggle.addEventListener("click", () => {
   }
 });
 
-$('.single-item').slick();
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  // direction: 'vertical',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  // navigation: {
+  //   nextEl: '.swiper-button-next',
+  //   prevEl: '.swiper-button-prev',
+  // },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+
+const swiperButtonPrev = document.getElementById("swiper-button-prev");
+const swiperButtonNext = document.getElementById("swiper-button-next");
+
+swiperButtonPrev.addEventListener("click", () => {
+  swiper.slidePrev();
+});
+
+swiperButtonNext.addEventListener("click", () => {
+  swiper.slideNext();
+});
+
+console.log("Swiper initialized:", swiper);
