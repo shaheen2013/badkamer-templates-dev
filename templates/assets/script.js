@@ -23,7 +23,7 @@ async function initToggleMenu() {
 
 async function initSlider() {
 const swiper = new Swiper('.gallery-wrapper', { loop: true });
-const reviews = new Swiper('.reviews-swiper', { loop: true,   spaceBetween: 20, });
+const reviews = new Swiper('.reviews-swiper', { loop: true,   spaceBetween: 20});
 
   const swiperButtonPrev = document.getElementById("swiper-button-prev");
   const swiperButtonNext = document.getElementById("swiper-button-next");
@@ -39,9 +39,9 @@ const reviews = new Swiper('.reviews-swiper', { loop: true,   spaceBetween: 20, 
 
 }
 
-let map;
-
 async function initMap() {
+  let map;
+
   const positionList = Array.from({ length: 50 }, (_, i) => {
     const baseLat = 52.3676;
     const baseLng = 4.9041;
@@ -80,6 +80,6 @@ async function initMap() {
   });
 }
 
-initToggleMenu()
-initSlider()
+initToggleMenu();
+initSlider();
 initMap();
