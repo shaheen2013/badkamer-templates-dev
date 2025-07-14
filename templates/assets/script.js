@@ -24,6 +24,8 @@ async function initToggleMenu() {
 async function initSlider() {
 const swiper = new Swiper('.gallery-wrapper', { loop: true });
 const reviews = new Swiper('.reviews-swiper', { loop: true,   spaceBetween: 20});
+const reviewsGoogle = new Swiper('.google-reviews-slider', { loop: true,   spaceBetween: 20});
+const generalReviewsGoogle = new Swiper('.general-reviews-slider', { loop: true,   spaceBetween: 20});
 
   const swiperButtonPrev = document.getElementById("swiper-button-prev");
   const swiperButtonNext = document.getElementById("swiper-button-next");
@@ -31,11 +33,23 @@ const reviews = new Swiper('.reviews-swiper', { loop: true,   spaceBetween: 20})
   const reviewButtonPrev = document.getElementById("review-button-prev");
   const reviewButtonNext = document.getElementById("review-button-next");
 
-  swiperButtonPrev.addEventListener("click", () => swiper.slidePrev());
-  swiperButtonNext.addEventListener("click", () => swiper.slideNext());
+  const reviewGoogleButtonPrev = document.getElementById("review-google-button-prev");
+  const reviewGoogleButtonNext = document.getElementById("review-google-button-next");
 
-  reviewButtonPrev.addEventListener("click", () => reviews.slidePrev());
-  reviewButtonNext.addEventListener("click", () => reviews.slideNext());
+  const reviewGeneralButtonPrev = document.getElementById("review-general-button-prev");
+  const reviewGeneralButtonNext = document.getElementById("review-general-button-next");
+
+  swiperButtonPrev?.addEventListener("click", () => swiper.slidePrev());
+  swiperButtonNext?.addEventListener("click", () => swiper.slideNext());
+
+  reviewButtonPrev?.addEventListener("click", () => reviews.slidePrev());
+  reviewButtonNext?.addEventListener("click", () => reviews.slideNext());
+
+  reviewGoogleButtonPrev?.addEventListener("click", () => reviewsGoogle.slidePrev());
+  reviewGoogleButtonNext?.addEventListener("click", () => reviewsGoogle.slideNext());
+
+  reviewGeneralButtonPrev?.addEventListener("click", () => generalReviewsGoogle.slidePrev());
+  reviewGeneralButtonNext?.addEventListener("click", () => generalReviewsGoogle.slideNext());
 
 }
 
