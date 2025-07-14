@@ -24,8 +24,9 @@ async function initToggleMenu() {
 async function initSlider() {
 const swiper = new Swiper('.gallery-wrapper', { loop: true });
 const reviews = new Swiper('.reviews-swiper', { loop: true,   spaceBetween: 20});
-const reviewsGoogle = new Swiper('.google-reviews-slider', { loop: true,   spaceBetween: 20});
-const generalReviewsGoogle = new Swiper('.general-reviews-slider', { loop: true,   spaceBetween: 20});
+const reviewsGoogle = new Swiper('.google-reviews-slider', { loop: true  });
+const generalReviewsGoogle = new Swiper('.general-reviews-slider', { loop: true});
+const generalReviewsTrust = new Swiper('.trust-reviews-slider', { loop: true,});
 
   const swiperButtonPrev = document.getElementById("swiper-button-prev");
   const swiperButtonNext = document.getElementById("swiper-button-next");
@@ -39,6 +40,9 @@ const generalReviewsGoogle = new Swiper('.general-reviews-slider', { loop: true,
   const reviewGeneralButtonPrev = document.getElementById("review-general-button-prev");
   const reviewGeneralButtonNext = document.getElementById("review-general-button-next");
 
+  const reviewTrustButtonPrev = document.getElementById("review-trust-button-prev");
+  const reviewTrustButtonNext = document.getElementById("review-trust-button-next");
+
   swiperButtonPrev?.addEventListener("click", () => swiper.slidePrev());
   swiperButtonNext?.addEventListener("click", () => swiper.slideNext());
 
@@ -50,6 +54,9 @@ const generalReviewsGoogle = new Swiper('.general-reviews-slider', { loop: true,
 
   reviewGeneralButtonPrev?.addEventListener("click", () => generalReviewsGoogle.slidePrev());
   reviewGeneralButtonNext?.addEventListener("click", () => generalReviewsGoogle.slideNext());
+
+  reviewTrustButtonPrev?.addEventListener("click", () => generalReviewsTrust.slidePrev());
+  reviewTrustButtonNext?.addEventListener("click", () => generalReviewsTrust.slideNext());
 
 }
 
