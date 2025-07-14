@@ -22,11 +22,11 @@ async function initToggleMenu() {
 }
 
 async function initSlider() {
-const swiper = new Swiper('.gallery-wrapper', { loop: true });
-const reviews = new Swiper('.reviews-swiper', { loop: true,   spaceBetween: 20});
-const reviewsGoogle = new Swiper('.google-reviews-slider', { loop: true  });
-const generalReviewsGoogle = new Swiper('.general-reviews-slider', { loop: true});
-const generalReviewsTrust = new Swiper('.trust-reviews-slider', { loop: true,});
+  const swiper = new Swiper('.gallery-wrapper', { loop: true });
+  const reviews = new Swiper('.reviews-swiper', { loop: true });
+  const reviewsGoogle = new Swiper('.google-reviews-slider', { loop: true });
+  const generalReviewsGoogle = new Swiper('.general-reviews-slider', { loop: true });
+  const generalReviewsTrust = new Swiper('.trust-reviews-slider', { loop: true, });
 
   const swiperButtonPrev = document.getElementById("swiper-button-prev");
   const swiperButtonNext = document.getElementById("swiper-button-next");
