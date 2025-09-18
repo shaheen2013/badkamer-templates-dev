@@ -1,4 +1,3 @@
 {
-  "editor.formatOnSave": false,
-  "prettier.enable": false
+    "liveServer.settings.port": 5501
 }

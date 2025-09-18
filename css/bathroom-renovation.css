@@ -1,0 +1,337 @@
+/* Common */
+
+/* title */
+.title {
+    color: var(--gray-900);
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 40px;
+}
+
+/* description */
+.description {
+    color: var(--gray-600);
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+}
+
+/* utility */
+/* max width */
+.max-w-650 {
+    max-width: 650px;
+}
+
+/* flex */
+.items-center {
+    align-items: center;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+/* background */
+.bg-white {
+    background-color: #fff !important;
+}
+
+/* Bathroom */
+.bathroom-section {
+    padding-top: 86px;
+    padding-bottom: 86px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+}
+
+.bathroom-image {
+    grid-column: span 12;
+    max-width: 100%;
+}
+
+@media (min-width: 1280px) {
+    .bathroom-image {
+        grid-column: span 6;
+        max-width: 538px;
+    }
+}
+
+.bathroom-content {
+    grid-column: span 12;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+@media (min-width: 1280px) {
+    .bathroom-content {
+        grid-column: span 6;
+    }
+}
+
+/* Furntiture */
+.furniture-section {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding-top: 86px;
+    padding-bottom: 86px;
+}
+
+.furniture-left {
+    grid-column: span 12;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (min-width: 1280px) {
+    .furniture-left {
+        grid-column: span 8;
+    }
+}
+
+.furniture-text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.furniture-thumbnails {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 32px;
+}
+
+.thumbnail-image {
+    width: 204px;
+    height: 204px;
+    object-fit: cover;
+}
+
+.furniture-main-image {
+    grid-column: span 12;
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (min-width: 1280px) {
+    .furniture-main-image {
+        grid-column: span 4;
+    }
+}
+
+/* Kranen */
+.faucet-section {
+    background-color: var(--gray-400);
+    padding-top: 86px;
+    padding-bottom: 86px;
+}
+
+.faucet-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* Baden */
+@media (min-width: 1280px) {
+    .baden-right {
+        grid-column: span 6;
+    }
+}
+
+@media (min-width: 1280px) {
+    .baden-main-image {
+        grid-column: span 6;
+        max-width: 538px;
+    }
+}
+
+/* Douchecabine */
+.douche-wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.douche-left {
+    grid-column: span 12;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 1280px) {
+    .douche-left {
+        grid-column: span 8;
+    }
+}
+
+.douche-main-image {
+    grid-column: span 12;
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (min-width: 1280px) {
+    .douche-main-image {
+        grid-column: span 4;
+    }
+}
+
+/* Ready for a worry */
+.ready-to-worry-section {
+    background-color: #091022;
+    gap: 40px;
+    padding: 86px 0;
+    position: relative;
+}
+
+.image-wrapper img {
+    max-width: 404.83px;
+    max-height: 268px;
+    position: absolute;
+    top: 0;
+}
+
+.image-wrapper.left img {
+    left: 0;
+}
+
+.image-wrapper.right img {
+    right: 0;
+}
+
+.ready-to-worry-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cta-title {
+    width: 655px;
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 48px;
+    margin: 0;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 66px;
+    background-color: var(--orange-500);
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 18px;
+}
+
+/* radiatoren section */
+.radiatoren-section {
+    padding-top: 86px;
+    padding-bottom: 86px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* tegels-section */
+.tegels-section {
+    padding-top: 86px;
+    padding-bottom: 86px;
+    background-color: var(--gray-400);
+}
+
+@media (min-width: 1280px) {
+    .tegels-main-image {
+        grid-column: span 5;
+        max-width: 538px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .tegels-content {
+        grid-column: span 7;
+    }
+}
+
+/* betonstuc-section */
+.betonstuc-wrapper {
+    padding-top: 86px;
+    padding-bottom: 86px;
+}
+
+.left-image-right-text-section {
+    display: flex;
+    gap: 132px;
+    padding-top: 86px;
+    padding-bottom: 86px;
+}
+
+.left-image-right-text-section .right {
+    grid-column: span 12;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (min-width: 1280px) {
+    .left-image-right-text-section .right {
+        grid-column: span 6;
+    }
+}
+
+.left-image-right-text-section .text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.left-image-right-text-section .thumbnails {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 32px;
+}
+
+.left-image-right-text-section .thumbnail-image {
+    width: 204px;
+    height: 204px;
+    object-fit: cover;
+}
+
+.left-image-right-text-section .main-image {
+    grid-column: span 12;
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (min-width: 1280px) {
+    .left-image-right-text-section .main-image {
+        grid-column: span 6;
+        max-width: 538px;
+    }
+}
+
+/* Only Text Section */
+.text-section {
+    background-color: var(--gray-400);
+    padding-top: 86px;
+    padding-bottom: 86px;
+}
+
+.text-section-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px; }
