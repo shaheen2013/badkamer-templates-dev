@@ -170,8 +170,18 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+  const src = getQueryParam("src");
+  if (src) {
+    const previewImage = document.getElementById("preview-album-image");
+    if (previewImage) {
+      previewImage.src = src;
+    }
+  }
 });
-
+function getQueryParam(name) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(name);
+}
 async function initMap() {
   let map;
 
