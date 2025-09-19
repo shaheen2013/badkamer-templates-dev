@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const badge = document.createElement("p");
       badge.textContent = el.id;
       badge.style.cssText =
-        "margin-left:8px;padding:2px 6px;font-size:11px;background:#F25C3C;color:#fff;border-radius:8px;vertical-align:middle;width:fit-content;max-height:40px;margin-left: auto; margin-right: auto;";
+        "margin-left:8px;padding:2px 6px;font-size:11px;background:#F25C3C;color:#fff;border-radius:8px;vertical-align:middle;width:fit-content;max-height:40px;";
       const parent = el.parentElement;
       if (el.getAttribute("data-show-label") === "false") {
         return;
@@ -47,10 +47,14 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         const container = document.createElement("div");
         container.appendChild(el.cloneNode(true));
-        badge.classList.add("self-start", "mr-auto");
         container.appendChild(badge);
         el.replaceWith(container);
-        container.classList.add("flex", "gap-2");
+        container.classList.add(
+          "flex",
+          "gap-2",
+          "items-center",
+          "justify-center"
+        );
       }
     });
   });
