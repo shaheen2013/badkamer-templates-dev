@@ -4,6 +4,7 @@
     --orange: #F25C3C;
     --title-color: #091022;
     --body-color: #676B76;
+    scroll-behavior: smooth;
 }
 
 /* FONT FACE DECLARATIONS */

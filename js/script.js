@@ -170,18 +170,8 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
-  const src = getQueryParam("src");
-  if (src) {
-    const previewImage = document.getElementById("preview-album-image");
-    if (previewImage) {
-      previewImage.src = src;
-    }
-  }
 });
-function getQueryParam(name) {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get(name);
-}
+
 async function initMap() {
   let map;
 
@@ -399,3 +389,51 @@ initMap();
 //       }
 //     });
 // })();
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+    const submitBtn = document.getElementById("submit-btn");
+    const submitText = document.getElementById("submit-text");
+    const submitLoading = document.getElementById("submit-loading");
+    const successMsg = document.getElementById("form-success");
+    const errorMsg = document.getElementById("form-error");
+
+    // Hide previous messages
+    successMsg.classList.add("hidden");
+    errorMsg.classList.add("hidden");
+
+    // Show loading state
+    submitBtn.disabled = true;
+    submitText.classList.add("hidden");
+    submitLoading.classList.remove("hidden");
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        // Show success message
+        successMsg.classList.remove("hidden");
+        form.reset();
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
+      // Show error message
+      errorMsg.classList.remove("hidden");
+    } finally {
+      // Reset button state
+      submitBtn.disabled = false;
+      submitText.classList.remove("hidden");
+      submitLoading.classList.add("hidden");
+    }
+  });
